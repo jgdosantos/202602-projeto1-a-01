@@ -1,7 +1,7 @@
-# [Nome da solução]
+# [Redução Churn Bulbe]
 
 > Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026
-> Cliente: **Bulbe Energia** · Turma **[A/B]** · Squad **[XX]**
+> Cliente: **Bulbe Energia** · Turma **[A]** · Squad **[01]**
 
 [Uma frase que resume a solução: o que ela faz e para quem. Exemplo: "Painel que acompanha o cliente novo da Bulbe da adesão ao pagamento da primeira fatura."]
 
@@ -9,13 +9,13 @@
 
 ## 1. Problema
 
-- **Dor escolhida:** clientes que não recebem ou não entendem a 1ª fatura
+- **Dor escolhida:** clientes que não pagam ou não entendem a 1ª fatura da Bulbe (inadinplencia)
 - **Evidência:** A queda do robô da Cemig atrasou a qualificação, e a 1ª fatura passou a chegar muito tempo depois da adesão
-- **Indicador que a solução pretende mover:** pagamento da 1ª fatura, melhora na comunicação com o cliente
+- **Indicador que a solução pretende mover:** pagamento da 1ª fatura, melhora na comunicação com o cliente e diminui inadinplencia
 
 ## 2. Persona e jornada
 
-- **Persona:** [nome fictício, idade, contexto em uma linha]
+- **Persona:** Rafael Souza, 34 anos, Belo Horizonte. Analista administrativo, casado, duas crianças. Aderiu à Bulbe por um anúncio no Instagram atraído pela promessa de economizar na conta de luz. É digital, resolve tudo pelo celular, mas tem pouca paciência pra ler termos e detalhes. Quando a primeira fatura da Bulbe chegou junto com a conta da Cemig, ficou confuso "por que estou pagando duas contas se era pra economizar?" e, na dúvida, não pagou a Bulbe.
 - **Mapa de jornada:** [docs/jornada.md](docs/jornada.md)
 
 ## 3. Solução
