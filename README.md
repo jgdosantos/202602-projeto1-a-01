@@ -9,11 +9,9 @@
 
 ## 1. Problema
 
-[Qual parte da dor da Bulbe o squad escolheu atacar e por quê. Use pelo menos um dado da apresentação da Bulbe como evidência.]
-
-- **Dor escolhida:** [ex.: clientes que não recebem ou não entendem a 1ª fatura]
-- **Evidência:** [ex.: cerca de 20% de falha na entrega de mensagens de WhatsApp]
-- **Indicador que a solução pretende mover:** [pagamento da 1ª fatura | churn do 1º mês | entregabilidade das comunicações]
+- **Dor escolhida:** clientes que não recebem ou não entendem a 1ª fatura
+- **Evidência:** A queda do robô da Cemig atrasou a qualificação, e a 1ª fatura passou a chegar muito tempo depois da adesão
+- **Indicador que a solução pretende mover:** pagamento da 1ª fatura, melhora na comunicação com o cliente
 
 ## 2. Persona e jornada
 
