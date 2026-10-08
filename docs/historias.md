@@ -5,7 +5,9 @@
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
 | HU01 | Como Sandra, cliente PF no 1º mês de Bulbe, quero entender o que acontece depois da minha adesão e receber minha 1ª fatura de forma clara, em um canal em que eu confie, para pagar em dia sem medo de golpe e sem perder o controle das minhas contas. | [ ] | alta | #4 |
+
 | HU02 | Como Cláudia, dona de salão de beleza (cliente PJ) no 1º mês de Bulbe, quero ser avisada pelo WhatsApp sobre o andamento da minha adesão e receber a 1ª fatura por esse mesmo canal, para ter certeza de que o cadastro deu certo, reconhecer a cobrança como legítima e pagar em dia. | [ ] | alta | #5 |
+
 ## Critérios de aceite
 
 ### HU01
