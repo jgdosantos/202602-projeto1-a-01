@@ -33,7 +33,7 @@ Sandra, 52 anos · Juiz de Fora (MG) · dona de um pequeno salão de beleza (CPF
 | [Início] | [ ] | [HU01] |
 | [ ] | [ ] | [ ] |
 
-- **Histórias de usuário:** [docs/historias.md](docs/historias.md)
+- **Histórias de usuário:** [docs/historias1.md](docs/historias1.md)
 - **Wireframes:** [docs/wireframes/](docs/wireframes/)
 
 ## 4. Tecnologias
