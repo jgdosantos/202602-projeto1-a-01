@@ -27,7 +27,7 @@ Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da
 | [Início] | [ ] | [HU01] |
 | [ ] | [ ] | [ ] |
 
-- **Histórias de usuário:** [docs/historias.md](docs/historias.md)
+- **Histórias de usuário:** [docs/historias1.md](docs/historias1.md)
 - **Wireframes:** [docs/wireframes/](docs/wireframes/)
 
 ## 4. Tecnologias

@@ -26,7 +26,7 @@
 
 ## Oportunidades registradas como Issues
 
-- **OP01 — [#13: Explicar a primeira fatura e a economia](https://github.com/jgdosantos/202602-projeto1-a-01/issues/13):** chegada da 1ª fatura; esclarecer valores, economia e relação com a Cemig. Origem da HU01, associada à Issue #4 em [historias.md](historias.md).
+- **OP01 — [#13: Explicar a primeira fatura e a economia](https://github.com/jgdosantos/202602-projeto1-a-01/issues/13):** chegada da 1ª fatura; esclarecer valores, economia e relação com a Cemig. Origem da HU01, associada à Issue #4 em [historias1.md](historias1.md).
 - **OP02 — [#12: Linha do tempo pós-adesão](https://github.com/jgdosantos/202602-projeto1-a-01/issues/12):** adesão e espera pela conexão; mostrar status, etapas e próximos passos.
 - **OP03 — [#11: Confirmar contatos com canal alternativo](https://github.com/jgdosantos/202602-projeto1-a-01/issues/11):** espera e chegada da 1ª fatura; conferir contatos e oferecer uma alternativa quando a mensagem não chegar.
 
