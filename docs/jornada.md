@@ -24,13 +24,13 @@
 | Pagamento | Confere o vencimento e usa o aplicativo do banco para pagar. | Fatura, aplicativo do banco, PIX ou boleto. | Já entendi quanto devo pagar? Posso deixar para depois? | Cautelosa; aliviada ao pagar | Adia o pagamento quando tem dúvidas. Evidência: 32,4% de inadimplência da primeira fatura entre set/2025 e jul/2026; dado de contexto, não prova dessa causa. | Destacar vencimento, valor e opções de pagamento fictícias. |
 | 2º mês | Compara as contas e avalia se continua na Bulbe. | Faturas, aplicação web, atendimento. | Economizei mesmo? Vale a pena continuar? | Avaliando; satisfeita se percebe economia | Não percebe claramente a economia. Evidência: a fatura antiga não mostrava com clareza a economia gerada. | Apresentar a economia do período de forma simples. |
 
-## Oportunidades para registrar como Issues
+## Oportunidades registradas como Issues
 
-> Os números das Issues de oportunidade ainda não foram informados. Registrar pelo menos estas três com o label `oportunidade` e adicioná-las ao GitHub Projects.
+- **OP01 — [#13: Explicar a primeira fatura e a economia](https://github.com/jgdosantos/202602-projeto1-a-01/issues/13):** chegada da 1ª fatura; esclarecer valores, economia e relação com a Cemig. Origem da HU01, associada à Issue #4 em [historias.md](historias.md).
+- **OP02 — [#12: Linha do tempo pós-adesão](https://github.com/jgdosantos/202602-projeto1-a-01/issues/12):** adesão e espera pela conexão; mostrar status, etapas e próximos passos.
+- **OP03 — [#11: Confirmar contatos com canal alternativo](https://github.com/jgdosantos/202602-projeto1-a-01/issues/11):** espera e chegada da 1ª fatura; conferir contatos e oferecer uma alternativa quando a mensagem não chegar.
 
-- [ ] **OP01 — Explicar a primeira fatura e a economia:** chegada da 1ª fatura; esclarecer valores, economia e relação com a Cemig. Origem da HU01, associada à Issue #4 em `historias1.md`.
-- [ ] **OP02 — Acompanhar a conexão:** espera pela conexão; mostrar o status e os próximos passos para reduzir a insegurança durante o período sem notícias.
-- [ ] **OP03 — Confirmar contatos e consultar a fatura:** espera e chegada da 1ª fatura; permitir conferir contatos e acessar a fatura na aplicação quando a mensagem não chegar.
+> As três Issues possuem o label `oportunidade`, conforme a lista enviada pelo grupo. A inclusão no GitHub Projects ainda precisa ser conferida.
 
 **Indicador principal:** pagamento da 1ª fatura.
 
