@@ -1,27 +1,21 @@
-# [Redução Churn Bulbe]
+# Redução Churn Bulbe
 
 > Projeto em Ciência de Dados I · Ibmec BH · 2º semestre de 2026
-> Cliente: **Bulbe Energia** · Turma **[A]** · Squad **[01]**
+> Cliente: **Bulbe Energia** · Turma **A** · Squad **01**
 
-[Uma frase que resume a solução: o que ela faz e para quem. Exemplo: "Painel que acompanha o cliente novo da Bulbe da adesão ao pagamento da primeira fatura."]
+Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da primeira fatura.
 
 ---
 
 ## 1. Problema
 
-- **Dor escolhida:** clientes que não pagam ou não entendem a 1ª fatura da Bulbe (inadinplencia)
+- **Dor escolhida:** clientes que não pagam ou não entendem a 1ª fatura da Bulbe (inadimplência)
 - **Evidência:** A queda do robô da Cemig atrasou a qualificação, e a 1ª fatura passou a chegar muito tempo depois da adesão
-- **Indicador que a solução pretende mover:** pagamento da 1ª fatura, melhora na comunicação com o cliente e diminui inadinplencia
+- **Indicador que a solução pretende mover:** pagamento da 1ª fatura, melhora na comunicação com o cliente e diminui inadimplência
 
 ## 2. Persona e jornada
 
-- **Persona:** Rafael Souza, 34 anos, Belo Horizonte. Analista administrativo, casado, duas crianças. Aderiu à Bulbe por um anúncio no Instagram atraído pela promessa de economizar na conta de luz. É digital, resolve tudo pelo celular, mas tem pouca paciência pra ler termos e detalhes. Quando a primeira fatura da Bulbe chegou junto com a conta da Cemig, ficou confuso "por que estou pagando duas contas se era pra economizar?" e, na dúvida, não pagou a Bulbe.
-**Persona 2:** Persona: Sandra
-Sandra, 52 anos · Juiz de Fora (MG) · dona de um pequeno salão de beleza (CPF, residência própria) · Cliente PF, 1º mês de Bulbe
-	• Contexto: Aderiu depois de ver uma propaganda e de uma cliente do salão comentar que estava pagando menos. Fez o cadastro pelo celular com a ajuda da filha. Paga cerca de R$ 420 de luz por mês, e a conta da casa pesa no orçamento.
-	• Objetivo: Pagar menos pela energia sem ter que aprender nada novo e sem perder o controle das contas.
-	• Medos e dúvidas: "Isso é golpe?", "Vou pagar duas contas?", "Quem é esse número que me mandou mensagem?", "Se eu não pagar, cortam minha luz?"
-	• Canais: Usa WhatsApp, mas bloqueia números desconhecidos depois de quase cair em golpes. Atende ligação, mas quase não abre e-mail. Não baixou o app. Prefere pagar boleto e ainda não confia no PIX para valores altos.
+- **Persona escolhida:** Helena Martins, 46 anos, Contagem (MG), auxiliar administrativa. Cliente PF no primeiro mês de Bulbe. Aderiu pelo celular para economizar e precisa entender a conexão, a primeira fatura e a relação com a conta da Cemig. Persona fictícia.
 - **Mapa de jornada:** [docs/jornada.md](docs/jornada.md)
 
 ## 3. Solução
@@ -33,7 +27,7 @@ Sandra, 52 anos · Juiz de Fora (MG) · dona de um pequeno salão de beleza (CPF
 | [Início] | [ ] | [HU01] |
 | [ ] | [ ] | [ ] |
 
-- **Histórias de usuário:** [docs/historias.md](docs/historias.md)
+- **Histórias de usuário:** [docs/historias1.md](docs/historias1.md)
 - **Wireframes:** [docs/wireframes/](docs/wireframes/)
 
 ## 4. Tecnologias
