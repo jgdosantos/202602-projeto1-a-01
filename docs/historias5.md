@@ -19,7 +19,7 @@
 
 ## Critérios de aceite
 
-### HU01
+### HU03
 
 - [ ] A fatura apresenta mês de referência, vencimento, valor a pagar e status.
 - [ ] A economia do período aparece em reais, separada do valor a pagar.
