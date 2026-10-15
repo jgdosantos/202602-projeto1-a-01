@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulbe | Cadastro</title>
+<link rel="stylesheet" href="../../assets/css/tela-solucao-1.css">
+<script src="../../assets/js/tela-solucao-1.js" defer></script>
+</head>
+<body data-etapa="1"><header><span class="logo">bulbe.</span><a href="../../index.html">Voltar para o início</a></header><main><nav aria-label="Etapas"><span class="active" aria-current="step">1. Seus dados</span><span>2. Comunicação</span><span>3. Confirmação</span></nav><form id="form"><article id="s1"><small>VAMOS COMEÇAR</small><h1>Faça seu cadastro</h1><p>Informe seus dados para iniciar sua jornada com a Bulbe.</p><label for="nome">Nome completo</label><input id="nome" autocomplete="name" required placeholder="Ex.: Helena Martins"><label for="titularidade">A conta de luz está no seu nome?</label><select id="titularidade" required><option value="">Selecione a titularidade</option><option value="Sou titular da conta de luz">Sim, sou titular</option><option value="A conta de luz está em nome de outra pessoa">Não, está em nome de outra pessoa</option></select><label for="cpf">CPF do solicitante</label><input id="cpf" inputmode="numeric" required pattern="(?:[0-9]{11}|[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2})" placeholder="000.000.000-00" aria-describedby="cpfAjuda"><small id="cpfAjuda">Use um CPF fictício neste protótipo.</small><label for="email">E-mail</label><input id="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com"><label for="tel">Celular com DDD</label><input id="tel" type="tel" autocomplete="tel" required pattern="[0-9 ()+-]{10,20}" placeholder="(31) 99999-9999"><div class="actions"><button class="primary">Continuar →</button></div></article></form><footer>Protótipo navegável • Use dados fictícios • Sem conexão com a Bulbe</footer></main></body></html>
