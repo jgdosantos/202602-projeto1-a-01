@@ -10,7 +10,17 @@ Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da
 ## 1. Problema
 
 - **Dor escolhida:** clientes que não pagam ou não entendem a 1ª fatura da Bulbe (inadimplência)
-- **Evidência:** A queda do robô da Cemig atrasou a qualificação, e a 1ª fatura passou a chegar muito tempo depois da adesão
+- **Evidências registradas no projeto:**
+  - **32,4% de inadimplência na primeira fatura**, entre setembro de 2025 e julho de 2026.
+  - Clientes chegaram a ficar **até 20 dias sem comunicação** durante o onboarding.
+  - Cerca de **20% de falha nas mensagens de WhatsApp**, dificultando a entrega dos avisos.
+  - A fatura antiga apresentava pouca clareza sobre os custos e a economia gerada.
+  - A queda do robô da Cemig atrasou a qualificação, prolongando a espera até a primeira fatura.
+
+**Fonte:** material da aula 19, *Etapa 2: Jornada do Usuário com o caso Bulbe Energia*, baseado na apresentação Bulbe & Ibmec de setembro de 2026. Evidências transcritas no [mapa de jornada](docs/jornada.md).
+
+> Esses dados contextualizam a dor escolhida; não demonstram, isoladamente, que as falhas de comunicação causaram a inadimplência. Ainda não há resultado medido da solução.
+
 - **Indicador que a solução pretende mover:** pagamento da 1ª fatura, melhora na comunicação com o cliente e diminui inadimplência
 
 ## 2. Persona e jornada
@@ -20,14 +30,45 @@ Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da
 
 ## 3. Solução
 
-[Descrição curta da solução e das principais telas.]
+A solução prioriza **Helena Martins (persona 1)** e **Cláudia Ramos (persona 2)**, combinando comunicação clara com incentivo ao pagamento em dia.
 
-| Tela | O que faz | História relacionada |
-| --- | --- | --- |
-| [Início] | [ ] | [HU01] |
-| [ ] | [ ] | [ ] |
+### Persona 1 — Helena Martins: cadastro e comunicação
 
-- **Histórias de usuário:** [docs/historias1.md](docs/historias1.md)
+Helena precisa ter certeza de que sua adesão deu certo, receber avisos em um canal que utiliza e compreender a primeira fatura. A proposta permite conferir os dados de contato, indicar uma preferência de recebimento da conta e escolher o canal de comunicação.
+
+| Tela | O que faz |
+| --- | --- |
+| Cadastro | Coleta nome, titularidade da conta de luz, CPF, e-mail e celular com DDD. |
+| Preferência de recebimento | Permite indicar a semana do mês em que a cliente prefere receber a conta, sujeita ao ciclo de faturamento da Bulbe. |
+| Comunicação | Permite escolher WhatsApp, e-mail ou SMS para receber avisos sobre a adesão e as faturas. |
+| Confirmação | Apresenta os dados e as preferências para revisão, com possibilidade de correção antes de confirmar. |
+
+- **História relacionada:** [persona 1 — Helena](docs/historias1.md).
+- **Wireframes registrados:** [cadastro](docs/wireframes/historias1.1.png), [comunicação](docs/wireframes/historias1.2.png) e [confirmação](docs/wireframes/historias1.3.png). A preferência de recebimento é uma etapa adicional proposta para o fluxo.
+
+### Persona 2 — Cláudia Ramos: incentivo ao pagamento
+
+A proposta para Cláudia complementa a comunicação da persona principal com um **sistema de pontos para incentivar o pagamento em dia**. A tela de pontos permite visualizar benefícios e acompanhar as recompensas demonstrativas.
+
+| Área da tela de pontos | O que faz |
+| --- | --- |
+| Saldo e nível | Mostra os pontos acumulados e a evolução do nível da cliente. |
+| Como ganhar pontos | Apresenta ações que geram pontos, incluindo o pagamento em dia. |
+| Resgate de benefícios | Permite visualizar recompensas e os pontos necessários para resgatá-las. |
+| Indicação | Apresenta a possibilidade de compartilhar um link de indicação. |
+| Extrato | Exibe o histórico de pontos ganhos e resgatados. |
+
+- **História relacionada:** [persona 2 — Cláudia](docs/historias2.md), que registra a necessidade de acompanhar a adesão e receber a fatura pelo canal utilizado.
+- **Wireframe registrado:** [tela de pontos](docs/wireframes/historias2.png).
+
+As telas representam propostas e protótipos. Os valores, pontos e benefícios são ilustrativos e dependem de validação com a Bulbe. A implementação integrada dos fluxos ainda não está disponível no `index.html` do repositório.
+
+- **Histórias de usuário:**
+  - [História 1 — Helena Martins](docs/historias1.md)
+  - [História 2 — Cláudia Ramos](docs/historias2.md)
+  - [História 3 — Mariana Dulce](docs/historias3.md)
+  - [Histórias 4 — Marina](docs/historias4.md)
+  - [História 5 — Carlos Vicente](docs/historias5.md)
 - **Wireframes:** [docs/wireframes/](docs/wireframes/)
 
 ## 4. Tecnologias
@@ -71,9 +112,11 @@ Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da
 
 | Integrante | GitHub | Papel principal |
 | --- | --- | --- |
-| [Nome] | [@usuario](https://github.com/usuario) | [ex.: Scrum Master, front-end, dados, documentação] |
-| [Nome] | [@usuario](https://github.com/usuario) | [ ] |
-| [Nome] | [@usuario](https://github.com/usuario) | [ ] |
+| Luiza Paviotti | [@Luiza-Paviotti-Penido](https://github.com/Luiza-Paviotti-Penido) | Desenvolvedora |
+| Joao Gabriel dos Santos | [@jgdosantos](https://github.com/jgdosantos) | Desenvolvedor |
+| Andre | [@andreibmec](https://github.com/andreibmec) | Desenvolvedor |
+| Ana Carolina Lanes | [@anacarolinalanes](https://github.com/anacarolinalanes) | Desenvolvedora |
+| Sergio Matheus | [@Sergio-Matheus](https://github.com/Sergio-Matheus) | Desenvolvedor |
 
 ## 9. Entregas
 
