@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08068d">
+    <title>Bulbe | Onboarding</title>
+    <link rel="stylesheet" href="onboarding.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="onboarding.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Ir ao conteúdo</a>
+
+    <div class="aparelho">
+        <div class="app onboarding">
+            <div class="barra-status" aria-label="Barra de status ilustrativa">
+                <span class="horario-status">9:41</span>
+                <div class="status-direita">
+                    <span class="sinal-status" role="img" aria-label="Sinal de celular completo"><i></i><i></i><i></i><i></i></span>
+                    <span class="rede-status">4G</span>
+                    <span class="bateria-status" role="img" aria-label="Bateria em 80%"><span></span></span>
+                </div>
+            </div>
+
+            <main class="conteudo-onboarding" id="conteudo" tabindex="-1">
+                <!-- Preencher as imagens e os textos no objeto etapas de onboarding.js. -->
+                <div class="ilustracao-onboarding">
+                    <img id="imagem-etapa" alt="" hidden>
+                </div>
+                <section class="texto-onboarding">
+                    <h1 id="titulo-etapa"></h1>
+                    <p id="descricao-etapa"></p>
+                </section>
+            </main>
+
+            <footer class="rodape-onboarding">
+                <nav class="indicadores" aria-label="Etapas do onboarding">
+                    <button class="indicador" type="button" data-etapa="0" aria-label="Ir para etapa 1" aria-current="step"><span></span></button>
+                    <button class="indicador" type="button" data-etapa="1" aria-label="Ir para etapa 2"><span></span></button>
+                    <button class="indicador" type="button" data-etapa="2" aria-label="Ir para etapa 3"><span></span></button>
+                    <button class="indicador" type="button" data-etapa="3" aria-label="Ir para etapa 4"><span></span></button>
+                    <button class="indicador" type="button" data-etapa="4" aria-label="Ir para etapa 5"><span></span></button>
+                </nav>
+                <p class="apenas-leitor" id="etapa-atual" role="status">Etapa 1 de 5</p>
+                <div class="acoes-onboarding">
+                    <button class="botao-onboarding botao-voltar" id="voltar" type="button" hidden>Voltar</button>
+                    <button class="botao-onboarding" id="proximo" type="button">Saiba mais</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
