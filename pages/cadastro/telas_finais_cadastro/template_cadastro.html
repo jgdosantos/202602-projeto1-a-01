@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08068d">
+    <title>Acesse sua conta | Bulbe</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="cadastro.js" defer></script>
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <a class="pular" href="#conteudo">Ir ao conteúdo</a>
+
+    <div class="aparelho">
+<div class="app acesso-email">
+        <header class="cabecalho-acesso">
+            <a class="voltar-acesso" href="index.html" aria-label="Voltar">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 4-6 6 6 6M3 10h10a7 7 0 0 1 7 7v5"/></svg>
+            </a>
+            <div class="logo-acesso"><img src="assets/img/logo-azul.svg" alt="Bulbe"></div>
+        </header>
+
+        <main class="conteudo-acesso" id="conteudo">
+            <div class="titulo-acesso">
+                <h1>Vamos acessar a sua conta Bulbe.</h1>
+                <p>Informe o e-mail cadastrado na Bulbe.</p>
+            </div>
+
+            <form class="formulario-acesso" id="formulario-acesso">
+                <div class="campo-email">
+                    <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                    <div class="entrada-email">
+                        <input id="email" name="email" type="email" placeholder="exemplo@email.com" autocomplete="email" autocapitalize="none" spellcheck="false" required>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M7 14h1a7 7 0 0 0 8 0h1a4 4 0 0 1 4 4v3H3v-3a4 4 0 0 1 4-4Z"/></svg>
+                    </div>
+                </div>
+
+                <div class="aceite-termos">
+                    <input class="chave-aceite" id="aceite" name="aceite" type="checkbox" role="switch" aria-labelledby="texto-aceite" required>
+                    <p id="texto-aceite">
+                        <label for="aceite">Ao vincular minha conta ao Aplicativo Bulbe, declaro que estou ciente dos</label>
+                        <a href="https://bulbeenergia.com.br/termos-de-uso/" target="_blank" rel="noopener noreferrer">Termos de Uso</a> e
+                        <a href="https://bulbeenergia.com.br/politica-de-privacidade/" target="_blank" rel="noopener noreferrer">Política de Privacidade</a>.
+                    </p>
+                </div>
+
+                <div class="confirmacao-acesso">
+                    <p id="aviso-acesso" role="status" hidden></p>
+                    <button class="confirmar-acesso" id="confirmar" type="submit" disabled>Confirmar</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    </div>
+</body>
+</html>
