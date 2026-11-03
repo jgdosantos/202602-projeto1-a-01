@@ -106,7 +106,7 @@ As telas representam propostas e protótipos. Os valores, pontos e benefícios s
 
 ## 7. Quadro do projeto
 
-- **GitHub Projects:** [link para o quadro do squad]
+- **GitHub Projects:** [Kanban — 202602-projeto1-a-01](https://github.com/users/jgdosantos/projects/2)
 
 ## 8. Equipe
 
