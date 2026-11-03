@@ -27,6 +27,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Cores, tamanhos de texto e medidas compartilhadas */
 :root {
     --margem-lateral: 20px;
@@ -73,6 +81,7 @@ body {
 
 button,input,select,textarea {
     font: inherit;
+    font-family: var(--fonte);
 }
 
 a {
@@ -452,18 +461,19 @@ fieldset {
 
 .titulo-acesso h1 {
     color: var(--azul-universo);
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 1.35;
-    letter-spacing: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.4px;
 }
 
 .titulo-acesso p {
     margin-top: 12px;
     color: var(--texto);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.15px;
 }
 
 .formulario-acesso {
@@ -476,8 +486,10 @@ fieldset {
 .campo-email label {
     display: block;
     margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .campo-email label span {
@@ -496,8 +508,10 @@ fieldset {
     border-radius: var(--raio-botao);
     background: var(--branco);
     color: var(--texto);
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
 }
 
 .entrada-email input::placeholder {
@@ -604,6 +618,8 @@ fieldset {
     color: var(--branco);
     font-size: 16px;
     font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0;
 }
 
 .confirmar-acesso:disabled {
@@ -690,10 +706,10 @@ fieldset {
 
 .etapa-conteudo h1 {
     color: var(--azul-universo);
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 1.35;
-    letter-spacing: 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.4px;
 }
 
 .etapa-conteudo h1:focus,
@@ -704,9 +720,10 @@ fieldset {
 .descricao-etapa {
     margin: 10px 0 26px;
     color: var(--texto-secundario);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.15px;
 }
 
 .formulario-jornada {
@@ -722,8 +739,10 @@ fieldset {
 }
 
 .campo-jornada label {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .campo-jornada label span {
@@ -740,6 +759,9 @@ fieldset {
     background: var(--branco);
     color: var(--texto);
     font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15px;
 }
 
 .campo-jornada input::placeholder {
@@ -748,7 +770,10 @@ fieldset {
 
 .campo-jornada small {
     color: #64748b;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .acoes-jornada {
@@ -778,9 +803,10 @@ fieldset {
     color: var(--branco);
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 24px;
     text-align: center;
     text-decoration: none;
+    letter-spacing: 0;
 }
 
 .botao-jornada:hover {
@@ -969,11 +995,15 @@ fieldset {
 .canal-contato strong,
 .canal-contato small {
     display: block;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .canal-contato strong {
     color: var(--azul-universo);
     font-size: 14px;
+    font-weight: 600;
 }
 
 .canal-contato small {
@@ -1080,6 +1110,10 @@ fieldset {
 }
 
 .conclusao-jornada .botao-jornada {
+    flex: 0 0 auto;
+    align-self: center;
+    width: 100%;
+    max-width: 280px;
     margin-top: 24px;
 }
 
@@ -1135,4 +1169,53 @@ fieldset {
         padding-inline: var(--espacamento-padrao);
     }
 
+}
+
+/* Controle de visibilidade das senhas. */
+.entrada-senha {
+    position: relative;
+}
+
+.campo-jornada .entrada-senha input {
+    padding-right: 56px;
+}
+
+.alternar-senha {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--azul-universo);
+}
+
+.alternar-senha svg {
+    width: 24px;
+    height: 24px;
+}
+
+.alternar-senha .risco-olho {
+    display: block;
+}
+
+.alternar-senha[aria-pressed="true"] .risco-olho {
+    display: none;
+}
+
+.alternar-senha:focus-visible {
+    outline: 2px solid var(--azul-ceu);
+    outline-offset: -2px;
+}
+
+/* Evita duplicar o olhinho próprio com o controle nativo do navegador. */
+.entrada-senha input::-ms-reveal,
+.entrada-senha input::-ms-clear {
+    display: none;
 }

@@ -7,13 +7,41 @@ const campos = {
     telefone: document.getElementById('telefone')
 };
 
-let dados = { semana: 2, canal: 'WhatsApp' };
+// As senhas ficam apenas nos campos da tela, fora dos dados salvos no navegador.
+const senha = document.getElementById('senha');
+const confirmarSenha = document.getElementById('confirmar-senha');
+
+function validarSenhas() {
+    const atendeRequisitos = /[A-Z]/.test(senha.value) && /[0-9]/.test(senha.value) && /[^A-Za-z0-9\s]/.test(senha.value) && senha.value.length >= 8;
+    senha.setCustomValidity(senha.value && !atendeRequisitos
+        ? 'Use pelo menos 8 caracteres, com uma letra maiúscula, um número e um caractere especial.' : '');
+    confirmarSenha.setCustomValidity(confirmarSenha.value && confirmarSenha.value !== senha.value
+        ? 'As senhas devem ser iguais.' : '');
+}
+
+document.querySelectorAll('[data-alternar-senha]').forEach((botao) => {
+    const campo = document.getElementById(botao.dataset.alternarSenha);
+    const nome = campo === senha ? 'senha' : 'confirmação de senha';
+    botao.addEventListener('click', () => {
+        const mostrar = campo.type === 'password';
+        campo.type = mostrar ? 'text' : 'password';
+        botao.setAttribute('aria-pressed', String(mostrar));
+        botao.setAttribute('aria-label', `${mostrar ? 'Ocultar' : 'Mostrar'} ${nome}`);
+    });
+});
+
+senha.addEventListener('input', validarSenhas);
+confirmarSenha.addEventListener('input', validarSenhas);
+window.addEventListener('pageshow', validarSenhas);
+
+let dados = { semana: 2, canais: ['WhatsApp'] };
 let voltarParaRevisao = false;
 
 try {
     const salvos = JSON.parse(sessionStorage.getItem(chaveCadastro) || '{}');
     if (salvos && typeof salvos === 'object') {
         dados = { ...dados, ...salvos };
+        if (!Array.isArray(salvos.canais) && typeof salvos.canal === 'string') dados.canais = [salvos.canal];
     }
 } catch {
     // O formulário continua funcionando se o navegador bloquear o armazenamento.
@@ -26,7 +54,10 @@ Object.entries(campos).forEach(([nome, campo]) => {
 });
 
 if (![1, 2, 3, 4].includes(Number(dados.semana))) dados.semana = 2;
-if (!['WhatsApp', 'E-mail', 'SMS'].includes(dados.canal)) dados.canal = 'WhatsApp';
+const canaisValidos = ['WhatsApp', 'E-mail', 'SMS'];
+dados.canais = canaisValidos.filter((canal) => Array.isArray(dados.canais) && dados.canais.includes(canal));
+if (!dados.canais.length) dados.canais = ['WhatsApp'];
+delete dados.canal;
 
 function salvar() {
     Object.entries(campos).forEach(([nome, campo]) => {
@@ -92,9 +123,10 @@ document.querySelectorAll('[data-semana]').forEach((botao) => {
 
 const canais = document.querySelectorAll('input[name="canal"]');
 canais.forEach((canal) => {
-    canal.checked = canal.value === dados.canal;
+    canal.checked = dados.canais.includes(canal.value);
     canal.addEventListener('change', () => {
-        dados.canal = canal.value;
+        dados.canais = [...canais].filter((opcao) => opcao.checked).map((opcao) => opcao.value);
+        document.getElementById('revisar-dados').disabled = dados.canais.length === 0;
         salvar();
     });
 });
@@ -105,12 +137,13 @@ function atualizarRevisao() {
         document.getElementById(`revisao-${nome}`).textContent = dados[nome] || '';
     });
     document.getElementById('revisao-semana').textContent = `${dados.semana}ª semana de cada mês`;
-    document.getElementById('revisao-canal').textContent = dados.canal;
+    document.getElementById('revisao-canal').textContent = dados.canais.join(', ');
     document.getElementById('conferi-dados').checked = false;
     document.getElementById('finalizar-cadastro').disabled = true;
 }
 
 function mostrarTela() {
+    validarSenhas();
     const rota = location.hash.slice(1) || 'inicio';
     const etapa = etapas[rota];
 
@@ -123,7 +156,8 @@ function mostrarTela() {
         return;
     }
 
-    document.getElementById('tela-inicial').hidden = Boolean(etapa) || rota === 'sem-conta';
+    document.getElementById('tela-inicial').hidden = Boolean(etapa) || ['sem-conta', 'acesso'].includes(rota);
+    document.getElementById('tela-acesso').hidden = rota !== 'acesso';
     document.getElementById('tela-sem-conta').hidden = rota !== 'sem-conta';
     document.getElementById('jornada').hidden = !etapa;
     document.querySelectorAll('[id^="passo-"]').forEach((secao) => {
@@ -161,6 +195,7 @@ function avancar(proximaEtapa) {
 
 document.getElementById('form-dados').addEventListener('submit', (evento) => {
     evento.preventDefault();
+    validarSenhas();
     if (!evento.currentTarget.reportValidity()) return;
     dados.concluido = false;
     avancar('recebimento');
@@ -170,6 +205,7 @@ document.getElementById('confirmar-semana').addEventListener('click', () => avan
 
 document.getElementById('form-canal').addEventListener('submit', (evento) => {
     evento.preventDefault();
+    if (!dados.canais.length) return;
     avancar('confirmacao');
 });
 
@@ -196,6 +232,9 @@ document.getElementById('form-confirmacao').addEventListener('submit', (evento) 
     } catch {
         // A confirmação local também funciona sem armazenamento.
     }
+    senha.value = '';
+    confirmarSenha.value = '';
+    validarSenhas();
     location.hash = 'concluido';
 });
 
