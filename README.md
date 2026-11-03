@@ -30,7 +30,7 @@ Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da
 
 ## 3. Solução
 
-A solução prioriza **Helena Martins (persona 1)** e **Cláudia Ramos (persona 2)**, combinando comunicação clara com incentivo ao pagamento em dia.
+A solução reúne propostas para cinco personas, combinando cadastro, comunicação clara sobre as faturas e incentivo ao pagamento em dia.
 
 ### Persona 1 — Helena Martins: cadastro e comunicação
 
@@ -61,7 +61,29 @@ A proposta para Cláudia complementa a comunicação da persona principal com um
 - **História relacionada:** [persona 2 — Cláudia](docs/historias2.md), que registra a necessidade de acompanhar a adesão e receber a fatura pelo canal utilizado.
 - **Wireframe registrado:** [tela de pontos](docs/wireframes/historias2.png).
 
-As telas representam propostas e protótipos. Os valores, pontos e benefícios são ilustrativos e dependem de validação com a Bulbe. A implementação integrada dos fluxos ainda não está disponível no `index.html` do repositório.
+### Persona 3 — Mariana Dulce: primeira fatura e pagamento
+
+A proposta explica a primeira fatura, o valor, o vencimento e a relação com a conta da Cemig. O fluxo prevê acesso à fatura e pagamento via PIX para ajudar Mariana a pagar dentro do prazo.
+
+- **História relacionada:** [Mariana](docs/historias3.md).
+- **Wireframes registrados:** [telas da história 3](https://github.com/jgdosantos/202602-projeto1-a-01/tree/main/docs/wireframes), arquivos `historias3.1.png` a `historias3.5.png`.
+
+### Persona 4 — Marina: clareza sobre as duas contas
+
+A proposta esclarece as cobranças da Cemig e da Bulbe antes da adesão e na consulta da primeira fatura. As telas incluem confirmação de entendimento, configuração de avisos e acompanhamento dos ciclos. Prazos e regras de cobrança dependem de validação com a Bulbe.
+
+- **História relacionada:** [Marina](docs/historias4.md).
+- **Wireframes registrados:** [telas da história 4](docs/wireframes/), arquivos `historia4-tela01.png` a `historia4-tela08.png`.
+
+### Persona 5 — Carlos Vicente: Plano Família
+
+A proposta permite que Carlos convide familiares ou pessoas de confiança para acompanhar a fatura da Bulbe. As telas apresentam o Plano Família, o cadastro e a revisão dos convites, enviados por WhatsApp ou carta pelos Correios com um link para aceitar ou recusar. A pessoa só participa após aceitar o convite.
+
+- **História relacionada:** [Carlos](docs/historias5.md).
+- **Telas do Plano Família:** [convites e aceite](https://github.com/jgdosantos/202602-projeto1-a-01/blob/main/pages/PlanoFamilia/Servidor%20Java/publico/index.html).
+- **Entrega relacionada:** [PR #34 — Adiciona Telas do Plano Familia](https://github.com/jgdosantos/202602-projeto1-a-01/pull/34).
+
+As soluções estão implementadas nas telas de cadastro, pontos, onboarding e Plano Família, disponíveis nos arquivos `index.html` das respectivas pastas. Os valores, pontos e benefícios apresentados são ilustrativos.
 
 - **Histórias de usuário:**
   - [História 1 — Helena Martins](docs/historias1.md)
@@ -93,7 +115,12 @@ As telas representam propostas e protótipos. Os valores, pontos e benefícios s
 
 ```
 ├── index.html            # Página inicial
-├── pages/                # Demais telas da solução
+├── pages/                # Telas da solução
+│   ├── cadastro/         # Cadastro e confirmação dos dados
+│   ├── onboarding/       # Orientações após a adesão
+│   ├── pontos/           # Pontos e benefícios
+│   ├── PlanoFamilia/     # Convites e participação de familiares
+│   └── padrao/           # Modelo visual das telas
 ├── assets/
 │   ├── css/style.css     # Estilos
 │   ├── js/main.js        # Lógica da página inicial
@@ -120,15 +147,17 @@ As telas representam propostas e protótipos. Os valores, pontos e benefícios s
 
 ## 9. Entregas
 
+Acompanhe as tarefas e issues no [board do projeto](https://github.com/users/jgdosantos/projects/2).
+
 | Marco | Aula | Status |
 | --- | --- | --- |
-| Mapa de jornada | 19 | [ ] |
-| Histórias de usuário | 20 | [ ] |
-| Wireframes | 21–23 | [ ] |
-| Sprint Review I | 24 | [ ] |
-| Implementação | 25–28 | [ ] |
-| Sprint Review II | 29 | [ ] |
-| Versão final | 30 | [ ] |
+| [Mapa de jornada](docs/jornada.md) | 19 | Concluído |
+| [Histórias de usuário](docs/) | 20 | Concluído |
+| [Wireframes](docs/wireframes/) | 21–23 | Concluído |
+| Sprint Review I | 24 | Concluído |
+| Implementação | 25–28 | |
+| Sprint Review II | 29 | |
+| Versão final | 30 | |
 
 ---
 
