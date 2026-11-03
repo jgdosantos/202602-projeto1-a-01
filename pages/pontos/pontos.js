@@ -216,12 +216,29 @@ function desenharTudo() {
 // ---------- Navegação entre as vistas (pelo # da URL) ----------
 function mostrarVista() {
     const nome = location.hash.replace('#', '');
-    const vista = vistas.includes(nome) ? nome : 'inicio';
+    // "#indicacoes" abre a vista Ganhar pontos já no card de indicação.
+    const indicacoes = nome === 'indicacoes';
+    const vista = indicacoes ? 'ganhar' : vistas.includes(nome) ? nome : 'inicio';
 
     vistas.forEach((v) => {
         $(`vista-${v}`).hidden = v !== vista;
     });
-    $('conteudo').scrollTop = 0;
+
+    // Marca no rodapé o item da tela aberta (fica azul).
+    const itemAtual = indicacoes ? 'indicacoes' : 'pontos';
+    document.querySelectorAll('.item-menu[data-tela]').forEach((item) => {
+        if (item.dataset.tela === itemAtual) {
+            item.setAttribute('aria-current', 'page');
+        } else {
+            item.removeAttribute('aria-current');
+        }
+    });
+
+    if (indicacoes) {
+        $('indicacao').scrollIntoView({ block: 'start' });
+    } else {
+        $('conteudo').scrollTop = 0;
+    }
 }
 
 // ---------- Resgate ----------
@@ -331,7 +348,7 @@ document.addEventListener('click', (evento) => {
     const menu = evento.target.closest('.item-menu');
     if (menu) {
         if (menu.dataset.tela === 'pontos') location.hash = '#inicio';
-        if (menu.dataset.tela === 'indicacoes') location.hash = '#ganhar';
+        if (menu.dataset.tela === 'indicacoes') location.hash = '#indicacoes';
         if (menu.dataset.tela === 'conexao') mostrarAviso('A tela de conexão ainda não está ligada a esta página.');
     }
 });
