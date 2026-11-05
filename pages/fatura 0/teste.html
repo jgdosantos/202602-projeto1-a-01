@@ -1,0 +1,344 @@
+teste.html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08068d">
+    <title>Bulbe | Teste da Fatura 0 no aplicativo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="fatura0.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Ir ao conteúdo</a>
+
+    <div class="aparelho">
+<div class="tela">
+        <!-- Barra de status visual para a prévia do aplicativo. -->
+        <div class="barra-status" aria-label="Barra de status ilustrativa">
+            <span class="horario-status">9:41</span>
+            <div class="status-direita">
+                <span class="sinal-status" role="img" aria-label="Sinal de celular completo"><i></i><i></i><i></i><i></i></span>
+                <span class="rede-status">4G</span>
+                <span class="bateria-status" role="img" aria-label="Bateria em 80%"><span></span></span>
+            </div>
+        </div>
+
+        <header class="cabecalho">
+            <div class="barra-superior">
+                <button class="botao-icone" type="button" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+
+                <img class="logo" src="assets/img/logo-cabecalho.svg" alt="Bulbe">
+
+                <div class="atalhos">
+                    <button class="botao-icone" type="button" aria-label="Notificações">
+                        <img src="assets/img/notificacao.svg" alt="">
+                    </button>
+                    <button class="botao-icone" type="button" aria-label="Meu perfil">
+                        <span class="avatar" aria-hidden="true">AM</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="faixa-indicacao">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m9 12-2 9 5-3 5 3-2-9"/></svg>
+                <p>Indique e ganhe <strong>500 pontos</strong> por amigo conectado</p>
+            </div>
+        </header>
+
+        <main class="conteudo" id="conteudo" tabindex="-1">
+            <section class="cartao-teste" aria-labelledby="titulo-fatura-zero">
+                <div class="resumo-fatura">
+                    <div><h1 id="titulo-fatura-zero">Sua Fatura 0</h1><p class="texto-suave">Para treinar, sem cobrança</p></div>
+                    <span class="selo-fatura">FATURA 0</span>
+                </div>
+                <p class="valor-fatura">R$ 0,00</p>
+                <p class="nao-pagar"><strong>Esta fatura NÃO deve ser paga.</strong> A sua PRÓXIMA fatura deverá ser paga normalmente.</p>
+            </section>
+
+            <section class="cartao-teste" aria-labelledby="titulo-entenda">
+                <h2 id="titulo-entenda">Entenda sua conta de luz</h2>
+                <p class="texto-suave">Toque em um card para abrir ou fechar.</p>
+                <ul class="acordeao" data-acordeao>
+                    <li>
+                        <details class="card-info" id="card-pagamento">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-pagamento.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Como funciona o pagamento</strong><small>Pix, Pix Automático ou boleto, tudo pelo app, e-mail ou WhatsApp.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-pagamento.svg" alt=""></div>
+                                <p>Você recebe a fatura todo mês pelo app, e-mail ou WhatsApp e paga por Pix, Pix Automático ou boleto. 100% digital.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-conta-bulbe">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-conta-bulbe.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Conta Bulbe</strong><small>Energia consumida com desconto de até 15% todo mês.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-conta-bulbe.svg" alt=""></div>
+                                <p>Na conta Bulbe você paga a energia que consumiu, já com desconto de até 15% todo mês.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-conta-cemig">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-conta-cemig.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Conta Cemig</strong><small>Distribuidora que leva a energia até a sua casa e cuida da rede.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-conta-cemig.svg" alt=""></div>
+                                <p>A Cemig é a distribuidora: ela leva a energia até a sua casa e cuida da rede elétrica.</p>
+                <p class="card-info__destaque"><strong>A conta da Cemig NÃO DEVERÁ SER PAGA</strong>, já que a conta Bulbe inclui o percentual e irá redirecionar esse valor para a Cemig.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-o-que-e-a-bulbe">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-bulbe.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>O que é a Bulbe</strong><small>100% digital. Mais de 60 mil famílias já fazem parte.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-bulbe.svg" alt=""></div>
+                                <p>A Bulbe é 100% digital: você contrata, acompanha e paga tudo pelo celular. Mais de 60 mil famílias já fazem parte.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-energia-produzida">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-energia.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Como a energia é produzida</strong><small>Energia limpa gerada em usinas e injetada na rede da Cemig.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-energia.svg" alt=""></div>
+                                <p>A energia limpa é gerada em usinas e injetada na rede da Cemig, que a entrega até a sua casa.</p>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cartao-teste" aria-label="Atalhos">
+                <ul class="opcoes-fatura">
+                    <li><span class="icone-opcao verde" aria-hidden="true">+</span><div><h3>Indique e ganhe R$ 50</h3><p>Convide amigos para a Bulbe</p></div><span aria-hidden="true">›</span></li>
+                    <li><span class="icone-opcao azul" aria-hidden="true">≡</span><div><h3>Ir para minha conta</h3><p>Acompanhe pontos e economia</p></div><span aria-hidden="true">›</span></li>
+                </ul>
+            </section>
+
+            <section class="cartao-teste fim-teste" id="fim-teste">
+                <h2>Fim do teste de rolagem</h2>
+                <p>O cabeçalho e o rodapé continuam no mesmo lugar. Somente esta área central deve se mover.</p>
+                <p class="texto-suave">Conteúdo fictício para testar o modelo.</p>
+            </section>
+        </main>
+
+        <!-- Esta tela não pertence a nenhum item do menu: nenhum botão recebe aria-current.
+             Ao ligar a navegação, mover aria-current="page" para o item da tela que estiver aberta. -->
+        <footer class="rodape">
+            <nav class="navegacao" aria-label="Navegação principal">
+                <button class="item-menu" type="button" data-tela="conexao">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-7z"/></svg>
+                    <span>Conexão</span>
+                </button>
+                <button class="item-menu" type="button" data-tela="pontos">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m9 12-2 9 5-3 5 3-2-9"/></svg>
+                    <span>Pontos</span>
+                </button>
+                <button class="item-menu" type="button" data-tela="indicacoes">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M19 7v6M16 10h6"/></svg>
+                    <span>Indicações</span>
+                </button>
+            </nav>
+        </footer>
+    </div>
+    </div>
+</body>
+</html>
+teste.html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08068d">
+    <title>Bulbe | Teste da Fatura 0 no aplicativo</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src="fatura0.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Ir ao conteúdo</a>
+
+    <div class="aparelho">
+<div class="tela">
+        <!-- Barra de status visual para a prévia do aplicativo. -->
+        <div class="barra-status" aria-label="Barra de status ilustrativa">
+            <span class="horario-status">9:41</span>
+            <div class="status-direita">
+                <span class="sinal-status" role="img" aria-label="Sinal de celular completo"><i></i><i></i><i></i><i></i></span>
+                <span class="rede-status">4G</span>
+                <span class="bateria-status" role="img" aria-label="Bateria em 80%"><span></span></span>
+            </div>
+        </div>
+
+        <header class="cabecalho">
+            <div class="barra-superior">
+                <button class="botao-icone" type="button" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+
+                <img class="logo" src="assets/img/logo-cabecalho.svg" alt="Bulbe">
+
+                <div class="atalhos">
+                    <button class="botao-icone" type="button" aria-label="Notificações">
+                        <img src="assets/img/notificacao.svg" alt="">
+                    </button>
+                    <button class="botao-icone" type="button" aria-label="Meu perfil">
+                        <span class="avatar" aria-hidden="true">AM</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="faixa-indicacao">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m9 12-2 9 5-3 5 3-2-9"/></svg>
+                <p>Indique e ganhe <strong>500 pontos</strong> por amigo conectado</p>
+            </div>
+        </header>
+
+        <main class="conteudo" id="conteudo" tabindex="-1">
+            <section class="cartao-teste" aria-labelledby="titulo-fatura-zero">
+                <div class="resumo-fatura">
+                    <div><h1 id="titulo-fatura-zero">Sua Fatura 0</h1><p class="texto-suave">Para treinar, sem cobrança</p></div>
+                    <span class="selo-fatura">FATURA 0</span>
+                </div>
+                <p class="valor-fatura">R$ 0,00</p>
+                <p class="nao-pagar"><strong>Esta fatura NÃO deve ser paga.</strong> A sua PRÓXIMA fatura deverá ser paga normalmente.</p>
+            </section>
+
+            <section class="cartao-teste" aria-labelledby="titulo-entenda">
+                <h2 id="titulo-entenda">Entenda sua conta de luz</h2>
+                <p class="texto-suave">Toque em um card para abrir ou fechar.</p>
+                <ul class="acordeao" data-acordeao>
+                    <li>
+                        <details class="card-info" id="card-pagamento">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-pagamento.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Como funciona o pagamento</strong><small>Pix, Pix Automático ou boleto, tudo pelo app, e-mail ou WhatsApp.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-pagamento.svg" alt=""></div>
+                                <p>Você recebe a fatura todo mês pelo app, e-mail ou WhatsApp e paga por Pix, Pix Automático ou boleto. 100% digital.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-conta-bulbe">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-conta-bulbe.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Conta Bulbe</strong><small>Energia consumida com desconto de até 15% todo mês.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-conta-bulbe.svg" alt=""></div>
+                                <p>Na conta Bulbe você paga a energia que consumiu, já com desconto de até 15% todo mês.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-conta-cemig">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-conta-cemig.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Conta Cemig</strong><small>Distribuidora que leva a energia até a sua casa e cuida da rede.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-conta-cemig.svg" alt=""></div>
+                                <p>A Cemig é a distribuidora: ela leva a energia até a sua casa e cuida da rede elétrica.</p>
+                <p class="card-info__destaque"><strong>A conta da Cemig NÃO DEVERÁ SER PAGA</strong>, já que a conta Bulbe inclui o percentual e irá redirecionar esse valor para a Cemig.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-o-que-e-a-bulbe">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-bulbe.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>O que é a Bulbe</strong><small>100% digital. Mais de 60 mil famílias já fazem parte.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-bulbe.svg" alt=""></div>
+                                <p>A Bulbe é 100% digital: você contrata, acompanha e paga tudo pelo celular. Mais de 60 mil famílias já fazem parte.</p>
+                            </div>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="card-info" id="card-energia-produzida">
+                            <summary class="card-info__botao">
+                                <span class="card-info__icone" aria-hidden="true"><img src="assets/img/icone-energia.svg" alt=""></span>
+                                <span class="card-info__texto"><strong>Como a energia é produzida</strong><small>Energia limpa gerada em usinas e injetada na rede da Cemig.</small></span>
+                                <svg class="card-info__seta" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                            </summary>
+                            <div class="card-info__miolo">
+                                <div class="card-info__imagem" aria-hidden="true"><img src="assets/img/icone-energia.svg" alt=""></div>
+                                <p>A energia limpa é gerada em usinas e injetada na rede da Cemig, que a entrega até a sua casa.</p>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="cartao-teste" aria-label="Atalhos">
+                <ul class="opcoes-fatura">
+                    <li><span class="icone-opcao verde" aria-hidden="true">+</span><div><h3>Indique e ganhe R$ 50</h3><p>Convide amigos para a Bulbe</p></div><span aria-hidden="true">›</span></li>
+                    <li><span class="icone-opcao azul" aria-hidden="true">≡</span><div><h3>Ir para minha conta</h3><p>Acompanhe pontos e economia</p></div><span aria-hidden="true">›</span></li>
+                </ul>
+            </section>
+
+            <section class="cartao-teste fim-teste" id="fim-teste">
+                <h2>Fim do teste de rolagem</h2>
+                <p>O cabeçalho e o rodapé continuam no mesmo lugar. Somente esta área central deve se mover.</p>
+                <p class="texto-suave">Conteúdo fictício para testar o modelo.</p>
+            </section>
+        </main>
+
+        <!-- Esta tela não pertence a nenhum item do menu: nenhum botão recebe aria-current.
+             Ao ligar a navegação, mover aria-current="page" para o item da tela que estiver aberta. -->
+        <footer class="rodape">
+            <nav class="navegacao" aria-label="Navegação principal">
+                <button class="item-menu" type="button" data-tela="conexao">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-7z"/></svg>
+                    <span>Conexão</span>
+                </button>
+                <button class="item-menu" type="button" data-tela="pontos">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="m9 12-2 9 5-3 5 3-2-9"/></svg>
+                    <span>Pontos</span>
+                </button>
+                <button class="item-menu" type="button" data-tela="indicacoes">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M19 7v6M16 10h6"/></svg>
+                    <span>Indicações</span>
+                </button>
+            </nav>
+        </footer>
+    </div>
+    </div>
+</body>
+</html>

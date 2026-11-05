@@ -1,8 +1,11 @@
+mobile.css
+
 /* Área visível do aplicativo, com prévia de celular no computador. */
 body {
     min-height: 100vh;
     min-height: 100dvh;
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     place-items: center;
     overflow: hidden;
 }
@@ -34,6 +37,7 @@ body {
 /* Cabeçalhos e rodapés ocupam o próprio espaço dentro da tela. */
 .app > .cabecalho,
 .app > .cabecalho-acesso,
+.tela-fatura > .cabecalho-acesso,
 .rodape-jornada,
 .tela > .cabecalho,
 .tela > .rodape {
@@ -87,6 +91,12 @@ body {
     padding: 10px 20px;
     border-top: 1px solid #e8edf2;
     background: var(--branco);
+}
+
+/* Telas do fluxo da Fatura 0: cada uma ocupa o espaço restante abaixo da barra de status. */
+.app > .tela-fatura {
+    flex: 1;
+    min-height: 0;
 }
 
 /* A tela inicial não possui cabeçalho: o conteúdo inteiro pode rolar. */
