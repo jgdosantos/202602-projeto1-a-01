@@ -409,6 +409,7 @@
 
     caixaAutorizacao.addEventListener('change', atualizarBotaoEnviar);
 
+    
     atualizarCampoContato();
     renderizarLista();
 })();
