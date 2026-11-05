@@ -13,7 +13,6 @@
 
     <div class="aparelho">
 <div class="tela">
-        <!-- Barra de status visual para a prévia do aplicativo. -->
         <div class="barra-status" aria-label="Barra de status ilustrativa">
             <span class="horario-status">9:41</span>
             <div class="status-direita">
@@ -49,7 +48,6 @@
 
         <main class="conteudo" id="conteudo" tabindex="-1">
 
-            <!-- TELA 1: Plano família (introdução) -->
             <section class="tela-plano" id="tela-plano-familia" aria-labelledby="titulo-plano-familia">
                 <div class="ilustracao" role="img" aria-label="Ilustração do plano família"></div>
 
@@ -85,14 +83,39 @@
                     <p>Ninguém entra sem aceitar o convite. Você pode <strong>cancelar um convite</strong> a qualquer momento.</p>
                 </aside>
 
-                <button class="botao botao-primario" type="button" data-ir="tela-quem-convidar">Convidar pessoas</button>
+                <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Convidar pessoas</button>
                 <button class="botao botao-secundario" type="button" data-ir="tela-convidado">Recebi um convite · Entrar</button>
             </section>
 
-            <!-- TELA 2: Passo 1 de 3 - Quem você quer convidar? -->
+            <section class="tela-plano" id="tela-sua-familia" aria-labelledby="titulo-sua-familia" hidden>
+                <a class="voltar" href="#tela-plano-familia" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg></a>
+                <h1 id="titulo-sua-familia">Sua família</h1>
+                <p>Veja quem faz parte do seu plano família.</p>
+
+                <h2 class="subtitulo-familia">Titular da assinatura</h2>
+                <ul class="lista-convites">
+                    <li class="cartao">
+                        <div class="convite-pessoa">
+                            <img class="convite-avatar" src="assets/img/avatar-convite.png" alt="">
+                            <div>
+                                <strong id="nome-titular">Você</strong>
+                                <p>Titular</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="subtitulo-familia">Convidados</h2>
+                <p id="contagem-familia"></p>
+                <ul class="lista-convites" id="lista-familia"></ul>
+
+                <button class="botao botao-primario" type="button" data-ir="tela-quem-convidar">Convidar pessoa</button>
+            </section>
+
             <section class="tela-plano" id="tela-quem-convidar" aria-labelledby="titulo-quem-convidar" hidden>
-                <a class="voltar" href="#tela-plano-familia">← Voltar</a>
+                <a class="voltar" href="#tela-sua-familia" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg></a>
                 <p class="passo-atual">Passo 1 de 3</p>
+                <div class="progresso" aria-hidden="true"><span class="ativo"></span><span></span><span></span></div>
                 <h1 id="titulo-quem-convidar">Quem você quer convidar?</h1>
 
             <form class="formulario" id="form-convite">
@@ -132,10 +155,10 @@
             </form>
             </section>
 
-            <!-- TELA 3: Passo 2 de 3 - Confira os convites -->
             <section class="tela-plano" id="tela-confira-convites" aria-labelledby="titulo-confira-convites" hidden>
-                <a class="voltar" href="#tela-quem-convidar">← Voltar</a>
+                <a class="voltar" href="#tela-quem-convidar" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg></a>
                 <p class="passo-atual">Passo 2 de 3</p>
+                <div class="progresso" aria-hidden="true"><span class="ativo"></span><span class="ativo"></span><span></span></div>
                 <h1 id="titulo-confira-convites">Confira os convites</h1>
 
                 <ul class="lista-convites">
@@ -169,7 +192,25 @@
                 <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Adicionar outra pessoa</button>
             </section>
 
-            <!-- TELA 4: Visão de quem recebeu o convite -->
+            <section class="tela-plano" id="tela-convites-enviados" aria-labelledby="titulo-convites-enviados" hidden>
+                <div class="ilustracao" role="img" aria-label="Ilustração de convites enviados"></div>
+
+                <p class="passo-atual">Passo 3 de 3</p>
+                <div class="progresso" aria-hidden="true"><span class="ativo"></span><span class="ativo"></span><span class="ativo"></span></div>
+                <h1 id="titulo-convites-enviados">Convites enviados!</h1>
+                <p id="contagem-enviados" role="status"></p>
+
+                <ul class="lista-convites"></ul>
+
+                <aside class="aviso">
+                    <span class="selo">Importante</span>
+                    <p>Ninguém entra sem aceitar o convite. Você pode <strong>cancelar um convite</strong> a qualquer momento.</p>
+                </aside>
+
+                <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Concluir</button>
+                <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Convidar mais pessoas</button>
+            </section>
+
             <section class="tela-plano" id="tela-convidado" aria-labelledby="titulo-convidado" hidden>
                 <div class="ilustracao" role="img" aria-label="Ilustração do convite"></div>
 
@@ -191,7 +232,6 @@
 
         </main>
 
-        <!-- Ligar os botões às respectivas telas ao implementar a navegação.-->
         <footer class="rodape">
             <nav class="navegacao" aria-label="Navegação principal">
                 <button class="item-menu" type="button" data-tela="conexao">
@@ -211,34 +251,6 @@
     </div>
     </div>
 
-    <script>
-        // Navegação simples entre as telas (seções com a classe .tela-plano)
-        (function () {
-            var telas = document.querySelectorAll('.tela-plano');
-            var conteudo = document.getElementById('conteudo');
-
-            function mostrar(id) {
-                var alvo = document.getElementById(id);
-                if (!alvo) { return; }
-                telas.forEach(function (tela) { tela.hidden = (tela !== alvo); });
-                conteudo.scrollTop = 0;
-                conteudo.focus({ preventScroll: true });
-            }
-
-            // Botões com data-ir e links internos (#tela-...)
-            document.addEventListener('click', function (e) {
-                var gatilho = e.target.closest('[data-ir], a[href^="#tela-"]');
-                if (!gatilho) { return; }
-                e.preventDefault();
-                mostrar(gatilho.dataset.ir || gatilho.getAttribute('href').slice(1));
-            });
-
-            // "Continuar" envia o formulário e leva para a conferência
-            document.getElementById('form-convite').addEventListener('submit', function (e) {
-                e.preventDefault();
-                mostrar('tela-confira-convites');
-            });
-        })();
-    </script>
+    <script src="comportamento.js"></script>
 </body>
 </html>
