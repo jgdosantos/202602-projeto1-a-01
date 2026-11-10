@@ -66,6 +66,7 @@ A proposta para Cláudia complementa a comunicação da persona principal com um
 A proposta explica a primeira fatura, o valor, o vencimento e a relação com a conta da Cemig. O fluxo prevê acesso à fatura e pagamento via PIX para ajudar Mariana a pagar dentro do prazo.
 
 - **História relacionada:** [Mariana](docs/historias3.md).
+- **Tela da primeira fatura:** [abrir tela](pages/fatura%200/index.html).
 - **Wireframes registrados:** [telas da história 3](https://github.com/jgdosantos/202602-projeto1-a-01/tree/main/docs/wireframes), arquivos `historias3.1.png` a `historias3.5.png`.
 
 ### Persona 4 — Marina: clareza sobre as duas contas
@@ -80,7 +81,7 @@ A proposta esclarece as cobranças da Cemig e da Bulbe antes da adesão e na con
 A proposta permite que Carlos convide familiares ou pessoas de confiança para acompanhar a fatura da Bulbe. As telas apresentam o Plano Família, o cadastro e a revisão dos convites, enviados por WhatsApp ou carta pelos Correios com um link para aceitar ou recusar. A pessoa só participa após aceitar o convite.
 
 - **História relacionada:** [Carlos](docs/historias5.md).
-- **Telas do Plano Família:** [convites e aceite](https://github.com/jgdosantos/202602-projeto1-a-01/blob/main/pages/PlanoFamilia/Servidor%20Java/publico/index.html).
+- **Telas do Plano Família:** [convites e aceite](pages/PlanoFamilia/index.html).
 - **Entrega relacionada:** [PR #34 — Adiciona Telas do Plano Familia](https://github.com/jgdosantos/202602-projeto1-a-01/pull/34).
 
 As soluções estão implementadas nas telas de cadastro, pontos, onboarding e Plano Família, disponíveis nos arquivos `index.html` das respectivas pastas. Os valores, pontos e benefícios apresentados são ilustrativos.
@@ -155,9 +156,9 @@ Acompanhe as tarefas e issues no [board do projeto](https://github.com/users/jgd
 | [Histórias de usuário](docs/) | 20 | Concluído |
 | [Wireframes](docs/wireframes/) | 21–23 | Concluído |
 | Sprint Review I | 24 | Concluído |
-| Implementação | 25–28 | |
-| Sprint Review II | 29 | |
-| Versão final | 30 | |
+| Implementação | 25–28 | Concluído |
+| Sprint Review II | 29 | Apresentação em grupo |
+| Versão final | 30 | [Tarefa #47](https://github.com/jgdosantos/202602-projeto1-a-01/issues/47) |
 
 ---
 
