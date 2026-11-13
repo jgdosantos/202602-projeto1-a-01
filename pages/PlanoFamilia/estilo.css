@@ -20,7 +20,7 @@
     font-display: swap;
 }
 
-/* Medidas de referência: iPhone SE, 375 x 667 pixels CSS */
+/* Medidas de referência: iPhone 15 Pro Max, 430 x 932 pixels CSS */
 :root {
     --azul: #08068d;
     --verde: #26d07c;
@@ -28,7 +28,8 @@
     --fundo: #f6f9f9;
     --texto: #3e4d5b;
     --cinza: #c2ccd6;
-    --largura-tela: 375px;
+    --perigo: #b00020;
+    --largura-tela: 430px;
     --altura-cabecalho: 104px;
     --altura-rodape: 72px;
     --margem-lateral: 16px;
@@ -37,6 +38,11 @@
 
 * {
     box-sizing: border-box;
+}
+
+/* Garante que o atributo hidden funcione em elementos com display definido */
+[hidden] {
+    display: none !important;
 }
 
 body {
@@ -331,6 +337,35 @@ p {
     background: var(--branco);
     border-color: var(--cinza);
     color: var(--texto);
+}
+
+/* Ação destrutiva (remover membro) */
+.botao-perigo {
+    background: var(--branco);
+    border-color: var(--perigo);
+    color: var(--perigo);
+}
+
+/* Telas "Confira os convites" e "Convites enviados": botões ficam no fim da tela */
+#tela-confira-convites:not([hidden]),
+#tela-convites-enviados:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.acoes-rodape {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    padding-top: 8px;
+    background: var(--fundo);
+}
+
+#confirmar-remocao {
+    background: var(--perigo);
+    border-color: var(--perigo);
+    color: var(--branco);
 }
 
 /* Campos do formulário */

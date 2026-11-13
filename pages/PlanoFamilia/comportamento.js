@@ -7,6 +7,7 @@
     var ID_QUEM = 'tela-quem-convidar';
     var ID_CONFIRA = 'tela-confira-convites';
     var ID_ENVIADOS = 'tela-convites-enviados';
+    var ID_REMOVER = 'tela-remover-membro';
 
     var ENVIOS = {
         whatsapp: { nome: 'WhatsApp', rotulo: 'Celular para envio do convite', placeholder: '(__) _____-____', type: 'tel', inputmode: 'tel', autocomplete: 'tel' },
@@ -22,6 +23,12 @@
     var campoContato = document.getElementById('contato');
     var rotuloContato = form.querySelector('label[for="contato"]');
     var botaoAdicionar = form.querySelector('button[type="reset"]');
+    var passoQuem = document.getElementById('passo-quem');
+    var progressoQuem = document.getElementById('progresso-quem');
+    var tituloQuem = document.getElementById('titulo-quem-convidar');
+    var botaoContinuar = form.querySelector('button[type="submit"]');
+    var botaoRemover = document.getElementById('botao-remover');
+    var nomeRemocao = document.getElementById('nome-remocao');
     var lista = document.querySelector('#' + ID_CONFIRA + ' .lista-convites');
     var caixaAutorizacao = document.querySelector('input[name="autorizacao"]');
     var botaoEnviar = document.querySelector('#' + ID_CONFIRA + ' .botao-primario');
@@ -36,6 +43,25 @@
     var familia = [];
     var editando = null;
     var editandoFamilia = null;
+
+    function atualizarModoEdicao() {
+        var emEdicao = editandoFamilia !== null;
+        passoQuem.hidden = emEdicao;
+        progressoQuem.hidden = emEdicao;
+        tituloQuem.textContent = emEdicao ? 'Editar convidado' : 'Quem você quer convidar?';
+        botaoContinuar.textContent = emEdicao ? 'Salvar alterações' : 'Continuar';
+        botaoAdicionar.hidden = emEdicao;
+        botaoRemover.hidden = !emEdicao;
+    }
+
+    function removerMembro() {
+        if (editandoFamilia === null) { return; }
+        var removido = familia.splice(editandoFamilia, 1)[0];
+        editandoFamilia = null;
+        limparFormulario(false);
+        mostrar(ID_FAMILIA);
+        toast(removido.nome + ' foi removido(a) do plano.');
+    }
 
     function mostrar(id) {
         var alvo = document.getElementById(id);
@@ -54,6 +80,12 @@
         }
         if (id === ID_ENVIADOS) {
             renderizarEnviados();
+        }
+        if (id === ID_QUEM) {
+            atualizarModoEdicao();
+        }
+        if (id === ID_REMOVER) {
+            nomeRemocao.textContent = editandoFamilia !== null ? familia[editandoFamilia].nome : '';
         }
 
         telas.forEach(function (tela) { tela.hidden = (tela !== alvo); });
@@ -344,6 +376,16 @@
         var editar = e.target.closest('[data-editar]');
         if (editar) {
             carregarParaEdicao(Number(editar.getAttribute('data-editar')));
+            return;
+        }
+
+        if (e.target.closest('#confirmar-remocao')) {
+            removerMembro();
+            return;
+        }
+
+        if (e.target.closest('[data-remover]')) {
+            mostrar(ID_REMOVER);
             return;
         }
 
