@@ -114,8 +114,8 @@
 
             <section class="tela-plano" id="tela-quem-convidar" aria-labelledby="titulo-quem-convidar" hidden>
                 <a class="voltar" href="#tela-sua-familia" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg></a>
-                <p class="passo-atual">Passo 1 de 3</p>
-                <div class="progresso" aria-hidden="true"><span class="ativo"></span><span></span><span></span></div>
+                <p class="passo-atual" id="passo-quem">Passo 1 de 3</p>
+                <div class="progresso" id="progresso-quem" aria-hidden="true"><span class="ativo"></span><span></span><span></span></div>
                 <h1 id="titulo-quem-convidar">Quem você quer convidar?</h1>
 
             <form class="formulario" id="form-convite">
@@ -152,6 +152,7 @@
 
             <button class="botao botao-primario" type="submit">Continuar</button>
             <button class="botao botao-secundario" type="reset">Adicionar outra pessoa</button>
+            <button class="botao botao-perigo" type="button" id="botao-remover" data-remover hidden>Remover do plano</button>
             </form>
             </section>
 
@@ -188,8 +189,10 @@
                     <span>Tenho autorização para informar os dados dessas pessoas.</span>
                 </label>
 
-                <button class="botao botao-primario" type="button" data-ir="tela-plano-familia">Enviar 2 convites</button>
-                <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Adicionar outra pessoa</button>
+                <div class="acoes-rodape">
+                    <button class="botao botao-primario" type="button" data-ir="tela-plano-familia">Enviar 2 convites</button>
+                    <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Adicionar outra pessoa</button>
+                </div>
             </section>
 
             <section class="tela-plano" id="tela-convites-enviados" aria-labelledby="titulo-convites-enviados" hidden>
@@ -207,8 +210,19 @@
                     <p>Ninguém entra sem aceitar o convite. Você pode <strong>cancelar um convite</strong> a qualquer momento.</p>
                 </aside>
 
-                <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Concluir</button>
-                <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Convidar mais pessoas</button>
+                <div class="acoes-rodape">
+                    <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Concluir</button>
+                    <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Convidar mais pessoas</button>
+                </div>
+            </section>
+
+            <section class="tela-plano" id="tela-remover-membro" aria-labelledby="titulo-remover" hidden>
+                <a class="voltar" href="#tela-quem-convidar" aria-label="Voltar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 14-5-5 5-5"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg></a>
+                <h1 id="titulo-remover">Remover do plano?</h1>
+                <p><strong id="nome-remocao"></strong> deixará de acompanhar a fatura da Bulbe. Você pode convidar a pessoa novamente depois.</p>
+
+                <button class="botao botao-perigo" type="button" id="confirmar-remocao">Sim, remover</button>
+                <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Cancelar</button>
             </section>
 
             <section class="tela-plano" id="tela-convidado" aria-labelledby="titulo-convidado" hidden>
