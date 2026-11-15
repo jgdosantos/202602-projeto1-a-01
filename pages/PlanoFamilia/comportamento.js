@@ -40,7 +40,10 @@
 
     var convites = [];
     var enviados = [];
-    var familia = [];
+    // EXEMPLO FICTÍCIO: remova este item (deixe var familia = [];) para começar com a lista vazia.
+    var familia = [
+        { nome: 'Maria Souza', envio: 'whatsapp', contato: '(31) 99999-1234' }
+    ];
     var editando = null;
     var editandoFamilia = null;
 
