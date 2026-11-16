@@ -83,8 +83,10 @@
                     <p>Ninguém entra sem aceitar o convite. Você pode <strong>cancelar um convite</strong> a qualquer momento.</p>
                 </aside>
 
-                <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Convidar pessoas</button>
-                <button class="botao botao-secundario" type="button" data-ir="tela-convidado">Recebi um convite · Entrar</button>
+                <div class="acoes-rodape">
+                    <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Convidar pessoas</button>
+                    <button class="botao botao-secundario" type="button" data-ir="tela-convidado">Recebi um convite · Entrar</button>
+                </div>
             </section>
 
             <section class="tela-plano" id="tela-sua-familia" aria-labelledby="titulo-sua-familia" hidden>
@@ -109,7 +111,9 @@
                 <p id="contagem-familia"></p>
                 <ul class="lista-convites" id="lista-familia"></ul>
 
-                <button class="botao botao-primario" type="button" data-ir="tela-quem-convidar">Convidar pessoa</button>
+                <div class="acoes-rodape">
+                    <button class="botao botao-primario" type="button" data-ir="tela-quem-convidar">Convidar pessoa</button>
+                </div>
             </section>
 
             <section class="tela-plano" id="tela-quem-convidar" aria-labelledby="titulo-quem-convidar" hidden>
@@ -128,19 +132,23 @@
                 <div class="opcoes-lista">
                     <label class="opcao">
                         <input type="radio" name="envio" value="whatsapp" checked>
-                        <span>WhatsApp · celular</span>
+                        <span class="opcao-titulo">WhatsApp</span>
+                        <span class="opcao-detalhe">Celular</span>
                     </label>
                     <label class="opcao">
                         <input type="radio" name="envio" value="sms">
-                        <span>SMS · celular</span>
+                        <span class="opcao-titulo">SMS</span>
+                        <span class="opcao-detalhe">Celular</span>
                     </label>
                     <label class="opcao">
                         <input type="radio" name="envio" value="email">
-                        <span>E-mail</span>
+                        <span class="opcao-titulo">E-mail</span>
+                        <span class="opcao-detalhe">Endereço de e-mail</span>
                     </label>
                     <label class="opcao">
                         <input type="radio" name="envio" value="correios">
-                        <span>Carta pelos Correios · exige endereço</span>
+                        <span class="opcao-titulo">Correios</span>
+                        <span class="opcao-detalhe">Carta · exige endereço</span>
                     </label>
                 </div>
             </fieldset>
@@ -150,9 +158,11 @@
                 <input type="tel" id="contato" name="contato" placeholder="(__) _____-____" inputmode="tel" autocomplete="tel">
             </div>
 
-            <button class="botao botao-primario" type="submit">Continuar</button>
-            <button class="botao botao-secundario" type="reset">Adicionar outra pessoa</button>
-            <button class="botao botao-perigo" type="button" id="botao-remover" data-remover hidden>Remover do plano</button>
+            <div class="acoes-rodape">
+                <button class="botao botao-primario" type="submit">Continuar</button>
+                <button class="botao botao-secundario" type="reset">Adicionar outra pessoa</button>
+                <button class="botao botao-perigo" type="button" id="botao-remover" data-remover hidden>Remover do plano</button>
+            </div>
             </form>
             </section>
 
@@ -184,12 +194,11 @@
                     <p>[Nome] convidou você para o plano família da Bulbe. Veja o que é e aceite ou recuse: [link]. Não é cobrança.</p>
                 </div>
 
-                <label class="autorizacao">
-                    <input type="checkbox" name="autorizacao">
-                    <span>Tenho autorização para informar os dados dessas pessoas.</span>
-                </label>
-
                 <div class="acoes-rodape">
+                    <label class="autorizacao">
+                        <input type="checkbox" name="autorizacao">
+                        <span>Tenho autorização para informar os dados dessas pessoas.</span>
+                    </label>
                     <button class="botao botao-primario" type="button" data-ir="tela-plano-familia">Enviar 2 convites</button>
                     <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Adicionar outra pessoa</button>
                 </div>
@@ -205,12 +214,11 @@
 
                 <ul class="lista-convites"></ul>
 
-                <aside class="aviso">
-                    <span class="selo">Importante</span>
-                    <p>Ninguém entra sem aceitar o convite. Você pode <strong>cancelar um convite</strong> a qualquer momento.</p>
-                </aside>
-
                 <div class="acoes-rodape">
+                    <aside class="aviso">
+                        <span class="selo">Importante</span>
+                        <p>Ninguém entra sem aceitar o convite. Você pode <strong>cancelar um convite</strong> a qualquer momento.</p>
+                    </aside>
                     <button class="botao botao-primario" type="button" data-ir="tela-sua-familia">Concluir</button>
                     <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Convidar mais pessoas</button>
                 </div>
@@ -221,8 +229,10 @@
                 <h1 id="titulo-remover">Remover do plano?</h1>
                 <p><strong id="nome-remocao"></strong> deixará de acompanhar a fatura da Bulbe. Você pode convidar a pessoa novamente depois.</p>
 
-                <button class="botao botao-perigo" type="button" id="confirmar-remocao">Sim, remover</button>
-                <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Cancelar</button>
+                <div class="acoes-rodape">
+                    <button class="botao botao-perigo" type="button" id="confirmar-remocao">Sim, remover</button>
+                    <button class="botao botao-secundario" type="button" data-ir="tela-quem-convidar">Cancelar</button>
+                </div>
             </section>
 
             <section class="tela-plano" id="tela-convidado" aria-labelledby="titulo-convidado" hidden>
@@ -230,18 +240,40 @@
 
                 <h1 id="titulo-convidado">Você foi convidado(a) para um plano família</h1>
 
-                <div class="cartao cartao-convite">
-                    <p class="rotulo">Quem convidou</p>
-                    <strong>Carlos Vicente</strong>
-                    <p>Convite enviado em 22/10/2026</p>
+                <h2 class="subtitulo-familia">Quem convidou</h2>
+                <ul class="lista-convites">
+                    <li class="cartao">
+                        <div class="convite-pessoa">
+                            <img class="convite-avatar" src="assets/img/avatar-convite.png" alt="">
+                            <div>
+                                <strong>Carlos Vicente</strong>
+                                <p>Titular</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 class="subtitulo-familia">O que é a Bulbe?</h2>
+                <p>Economize todos os meses de forma simples, rápida e sem burocracia. Com a Bulbe, você reduz seus gastos com energia elétrica, sem precisar de:</p>
+                <ul class="beneficios">
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Obras</span></li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Instalações</span></li>
+                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg><span>Mudanças na sua rotina</span></li>
+                </ul>
+                <p>Mais economia para o seu bolso, sem complicação!</p>
+
+                <h2 class="subtitulo-familia">O que muda para você?</h2>
+                <p>Você poderá acompanhar a fatura da Bulbe.</p>
+
+                <aside class="aviso-verde">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                    <p><strong>Este convite não gera cobrança.</strong></p>
+                </aside>
+
+                <div class="acoes-rodape">
+                    <button class="botao botao-primario" type="button" data-ir="tela-plano-familia">Aceitar convite</button>
+                    <button class="botao botao-secundario" type="button" data-ir="tela-plano-familia">Agora não</button>
                 </div>
-
-                <p><strong>O que é a Bulbe?</strong> Empresa que fornece energia de uma usina solar parceira com desconto na conta de luz.</p>
-                <p><strong>O que muda para você?</strong> Você poderá acompanhar a fatura. <strong>Este convite não gera cobrança.</strong></p>
-
-                <button class="botao botao-primario" type="button" data-ir="tela-plano-familia">Aceitar convite</button>
-                <button class="botao botao-secundario" type="button" data-ir="tela-plano-familia">Agora não</button>
-                <a class="link" href="#tela-plano-familia">Não conheço quem convidou</a>
             </section>
 
         </main>
