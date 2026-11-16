@@ -5,6 +5,8 @@
 
 Aplicação web que acompanha o cliente novo da Bulbe da adesão ao pagamento da primeira fatura.
 
+**Apresentação da Sprint II:** [202602-projeto1-a-01-ap-sprint02.vercel.app](https://202602-projeto1-a-01-ap-sprint02.vercel.app/#inicio) · código-fonte em [`apresentacao/`](apresentacao/)
+
 ---
 
 ## 1. Problema
@@ -116,6 +118,7 @@ As soluções estão implementadas nas telas de cadastro, pontos, onboarding e P
 
 ```
 ├── index.html            # Página inicial
+├── apresentacao/         # Apresentação da Sprint II (publicada na Vercel)
 ├── pages/                # Telas da solução
 │   ├── cadastro/         # Cadastro e confirmação dos dados
 │   ├── onboarding/       # Orientações após a adesão
